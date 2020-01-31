@@ -2,10 +2,7 @@ import json
 import logging
 import os
 
-# pylint: disable=import-error
 import azure.functions as func
-
-# pylint: disable=import-error
 from azure.cosmosdb.table.tableservice import TableService
 
 
@@ -27,7 +24,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     longUrl = get_param(req, "longurl")
 
     logging.info(
-        f"Parsed the following parameters from the HTTP request: path={path}, longUrl={longUrl}."
+        f"Parsed the following parameters from the HTTP request: path={path}, longurl={longUrl}."
     )
 
     if path and longUrl:
