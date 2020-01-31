@@ -2,8 +2,11 @@ import json
 import logging
 import os
 
-from azure.cosmosdb.table.tableservice import TableService
+# pylint: disable=import-error
 import azure.functions as func
+
+# pylint: disable=import-error
+from azure.cosmosdb.table.tableservice import TableService
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
