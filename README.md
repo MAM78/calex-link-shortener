@@ -1,5 +1,7 @@
 # calex-link-shortener
 
+[![Build Status](https://dev.azure.com/curtisalexander/calex-link-shortener/_apis/build/status/curtisalexander.calex-link-shortener?branchName=master)](https://dev.azure.com/curtisalexander/calex-link-shortener/_build/latest?definitionId=6&branchName=master)
+
 ## Requirements
 
 ### Local
