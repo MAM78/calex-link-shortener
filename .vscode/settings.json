@@ -6,5 +6,7 @@
   "azureFunctions.projectRuntime": "~3",
   "debug.internalConsoleOptions": "neverOpen",
   "python.formatting.provider": "black",
-  "python.pythonPath": ".venv\\Scripts\\python.exe"
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "__app__\\.venv\\Scripts\\pylint.exe",
+  "python.pythonPath": "__app__\\.venv\\Scripts\\python.exe"
 }
