@@ -9,7 +9,6 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
-
     # connect to table
     storage_account_name = os.environ["STORAGE_ACCOUNT_NAME"]
     storage_account_key = os.environ["STORAGE_ACCOUNT_KEY"]
@@ -21,15 +20,17 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # get all rows
     rows = table_service.query_entities("links")
 
-    data = { "links": [] }
+    data = {"links": []}
 
     for row in rows:
-        data["links"].append({
-            "PartitionKey": row.PartitionKey
-            "RowKey": row.RowKey,
-            "ShortUrl": row.ShortUrl,
-            "LongUrl": row.LongUrl,
-        })
+        data["links"].append(
+            {
+                "PartitionKey": row.PartitionKey,
+                "RowKey": row.RowKey,
+                "ShortUrl": row.ShortUrl,
+                "LongUrl": row.LongUrl,
+            }
+        )
 
     ret_json = json.dumps(data)
 
