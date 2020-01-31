@@ -20,10 +20,14 @@ Requires the following environment variables be set within the app configuration
 
 ## Client
 
-There is a simple Python client that can be used to call the `WriteShortUrl` Azure function.
+There is a simple Python client within the `client` directory that can be used to call the `WriteShortUrl` Azure function.
+
+The following environment variable must be set locally.
+
+- `AZURE_WRITESHORTURL_URL` = Azure Function url
 
 ```sh
-python main.py --asdf --jkl
+python main.py g https://www.google.com
 ```
 
 ## Inspiration

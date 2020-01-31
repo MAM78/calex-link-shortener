@@ -1,0 +1,5 @@
+black
+emoji
+pylint
+requests
+typer
