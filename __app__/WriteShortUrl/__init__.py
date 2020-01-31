@@ -2,8 +2,8 @@ import json
 import logging
 import os
 
-import azure.functions as func
 from azure.cosmosdb.table.tableservice import TableService
+import azure.functions as func
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
