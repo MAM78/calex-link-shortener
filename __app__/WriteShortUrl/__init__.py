@@ -47,6 +47,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             account_name=storage_account_name, account_key=storage_account_key
         )
 
+        # Try to create the table
+        try:
+            table_service.create_table("links", fail_on_exist=True)
+        except:
+            pass
+
         # write to table
         table_service.insert_or_replace_entity("links", data)
 
