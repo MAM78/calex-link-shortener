@@ -38,7 +38,6 @@ def validate_url(longurl: str) -> None:
 
 
 def create_azure_url(path: str, longurl: str) -> str:
-    # azure_url: str = "https://asdfalkulijalsdkjfaldf.com"
     azure_url: str = os.getenv("AZURE_WRITESHORTURL_URL")
     query_path: str = urlencode({"path": path, "longurl": longurl})
     azure_full_url: str = f"{azure_url}&{query_path}"
