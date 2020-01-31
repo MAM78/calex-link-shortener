@@ -6,15 +6,25 @@
 
 Requires the following environment variables be set within `local.settings.json`.
 
-- `STORAGE_ACCOUNT_NAME`
-- `STORAGE_ACCOUNT_KEY`
+- `BASE_URL` = Base url (e.g. `https://links.mydomain.com`) used to create the short url (e.g. `https://links.mydomain.com/a`)
+- `STORAGE_ACCOUNT_NAME` = Azure storage account name where the Azure table will be stored
+- `STORAGE_ACCOUNT_KEY` = Azure storage account key where the Azure table will be stored
 
 ### Azure
 
 Requires the following environment variables be set within the app configuration settings.
 
-- `STORAGE_ACCOUNT_NAME`
-- `STORAGE_ACCOUNT_KEY`
+- `BASE_URL` = Base url (e.g. `https://links.mydomain.com`) used to create the short url (e.g. `https://links.mydomain.com/a`)
+- `STORAGE_ACCOUNT_NAME` = Azure storage account name where the Azure table will be stored
+- `STORAGE_ACCOUNT_KEY` = Azure storage account key where the Azure table will be stored
+
+## Client
+
+There is a simple Python client that can be used to call the `WriteShortUrl` Azure function.
+
+```sh
+python main.py --asdf --jkl
+```
 
 ## Inspiration
 
