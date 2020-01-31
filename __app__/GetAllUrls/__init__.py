@@ -24,14 +24,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     data = { "links": [] }
 
     for row in rows:
-        _data = {
+        data["links"].append({
             "PartitionKey": row.PartitionKey
             "RowKey": row.RowKey,
             "ShortUrl": row.ShortUrl,
             "LongUrl": row.LongUrl,
-        }
-        
-        data["links"].append(_data)
+        })
 
     ret_json = json.dumps(data)
 
