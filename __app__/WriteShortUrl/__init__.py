@@ -26,7 +26,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     path = get_param(req, "path")
     longUrl = get_param(req, "longurl")
 
-    logging.info(f"Parsed the path as {path} and the longUrl as {longUrl}.")
+    logging.info(
+        f"Parsed the following parameters from the HTTP request: path={path}, longUrl={longUrl}."
+    )
 
     if path and longUrl:
         rowKey = path
@@ -49,8 +51,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         )
 
         # write to table
-        # tbl.set(json.dumps(data))
         table_service.insert_or_replace_entity("links", data)
+
+        logging.info(
+            f"Wrote the following to Azure Table Storage: PartitionKey={data['PartitionKey']}, RowKey={data['RowKey']}, ShortUrl={data['ShortUrl']}, LongUrl={data['LongUrl']}"
+        )
 
         resp = {
             "Status": "Ok",
