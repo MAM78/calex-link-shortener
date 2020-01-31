@@ -14,7 +14,7 @@ Requires the following environment variables be set within `local.settings.json`
 
 ### Azure
 
-Requires the following environment variables be set within the app configuration settings.
+Requires the following environment variables be set within the Azure Function Application settings.
 
 - `BASE_URL` = Base url (e.g. `https://links.mydomain.com`) used to create the short url (e.g. `https://links.mydomain.com/a`)
 - `STORAGE_ACCOUNT_NAME` = Azure storage account name where the Azure table will be stored
