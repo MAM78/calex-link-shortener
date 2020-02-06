@@ -72,7 +72,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "Status": "Error",
             "Message": "Did not write any links to Azure Table Storage",
         }
+
         resp_json = json.dumps(resp)
+
         return func.HttpResponse(
             body=resp_json, mimetype="application/json", status_code=400
         )
