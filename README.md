@@ -30,9 +30,26 @@ The following environment variable must be set locally.
 
 - `AZURE_WRITESHORTURL_URL` = Azure Function url
 - `AZURE_GETALLURLS_URL` = Azure Function url
+- `AZURE_DELETESHORTURL_URL` = Azure Function url
+
+To get help, run the following.
 
 ```sh
-python main.py g https://www.google.com
+python main.py --help
+```
+
+Alternatively, run help for a specific subcommand.
+
+```sh
+python main.py write --help
+```
+
+```sh
+python main.py get --help
+```
+
+```sh
+python main.py delete --help
 ```
 
 ## Inspiration

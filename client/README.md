@@ -5,10 +5,16 @@
 The following environment variable must be set locally.
 
 - `AZURE_WRITESHORTURL_URL` = Azure Function url
+- `AZURE_GETALLURLS_URL` = Azure Function url
+- `AZURE_DELETESHORTURL_URL` = Azure Function url
 
 ### Run
 
-There are two subcommands that can be run &mdash; one to write a short url into Azure Table Storage. The other will return all entries in the Azure Table Storage.
+There are three subcommands that can be run:
+
+- Write a short url into Azure Table Storage
+- Get all entries from Azure Table Storage.
+- Delete a short url from Azure Table Storage
 
 #### `WriteShortUrl`
 
@@ -20,6 +26,12 @@ python main.py write g https://www.google.com
 
 ```sh
 python main.py get
+```
+
+#### 'DeleteShortUrl`
+
+```sh
+python main.py delete g
 ```
 
 ### Help
@@ -38,6 +50,10 @@ python main.py write --help
 
 ```sh
 python main.py get --help
+```
+
+```sh
+python main.py delete --help
 ```
 
 ### Built with
