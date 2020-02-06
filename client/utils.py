@@ -4,6 +4,7 @@ import requests
 import typer
 
 from urllib.parse import quote_plus, urlencode, urlparse
+from typing import Optional
 
 
 def validate_url(longurl: str) -> None:
@@ -37,9 +38,15 @@ def validate_url(longurl: str) -> None:
         raise typer.Exit()
 
 
-def create_azure_url(env_var: str, path: str, longurl: str) -> str:
+def create_azure_url(env_var: str, path: str, **kwargs) -> str:
+    longurl: Optional[str] = kwargs.get("longurl", None)
     azure_url: str = os.getenv(env_var)
-    query_path: str = urlencode({"path": path, "longurl": longurl})
+
+    if longurl:
+        query_path: str = urlencode({"path": path, "longurl": longurl})
+    else:
+        query_path: str = urlencode({"path": path})
+
     azure_full_url: str = f"{azure_url}&{query_path}"
 
     typer.echo("Submitting GET to...")
