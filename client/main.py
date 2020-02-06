@@ -65,7 +65,7 @@ def delete(path: str) -> None:
     Delete an entry from Azure Table Storage.
     """
 
-    azure_full_url = utils.create_azure_url("AZURE_WRITESHORTURL_URL", path)
+    azure_full_url = utils.create_azure_url("AZURE_DELETESHORTURL_URL", path)
 
     # GET request
     try:
