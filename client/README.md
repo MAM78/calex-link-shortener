@@ -8,10 +8,18 @@ The following environment variable must be set locally.
 
 ### Run
 
-Run the client to execute the `WriteShortUrl` Azure Function.
+There are two subcommands that can be run &mdash; one to write a short url into Azure Table Storage. The other will return all entries in the Azure Table Storage.
+
+#### `WriteShortUrl`
+
+```sh
+python main.py write g https://www.google.com
+```
+
+#### `GetAllUrls`
 
 ```
-python main.py g https://www.google.com
+python main.py get
 ```
 
 ### Help
@@ -20,6 +28,16 @@ To get help, run the following.
 
 ```
 python main.py --help
+```
+
+Alternatively, run help for a specific subcommand.
+
+```
+python main.py write --help
+```
+
+```
+python main.py get --help
 ```
 
 ### Built with
