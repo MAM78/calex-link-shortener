@@ -18,7 +18,7 @@ python main.py write g https://www.google.com
 
 #### `GetAllUrls`
 
-```
+```sh
 python main.py get
 ```
 
@@ -26,17 +26,17 @@ python main.py get
 
 To get help, run the following.
 
-```
+```sh
 python main.py --help
 ```
 
 Alternatively, run help for a specific subcommand.
 
-```
+```sh
 python main.py write --help
 ```
 
-```
+```sh
 python main.py get --help
 ```
 
