@@ -15,9 +15,7 @@ app = typer.Typer()
 @app.command()
 def write(path: str, longurl: str) -> None:
     """
-    Write an entry into Azure Table Storage that can be used to map a URL path to a longer url.
-
-    Ultimately, the entries within the Azure Table are used for link shortening.
+    Write an entry into Azure Table Storage that maps a URL path to a longer url (link shortening).
     """
 
     # validation & setup
