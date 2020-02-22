@@ -24,7 +24,7 @@ Requires the following environment variables be set within the Azure Function Ap
 
 ## Client
 
-There is a simple Python client within the `client` directory that can be used to call the `WriteShortUrl` and `GetAllUrls` Azure Functions.
+There is a simple Python client within the `client` directory that can be used to call the `WriteShortUrl`, `DeleteShortUrl`, and `GetAllUrls` Azure Functions.
 
 The following environment variable must be set locally.
 
