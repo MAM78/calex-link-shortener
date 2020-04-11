@@ -28,7 +28,7 @@ python main.py write g https://www.google.com
 python main.py get
 ```
 
-#### 'DeleteShortUrl`
+#### `DeleteShortUrl`
 
 ```sh
 python main.py delete g
